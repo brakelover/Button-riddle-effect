@@ -30,14 +30,14 @@ body{
 .btn::before{
     content: "";
     position: absolute;
-    background-color: orangered;
+    background-color: var(--ranCol, orangered);
     width: 0;
     height: 0;
     left: var(--xPos);
     top: var(--yPos);
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    transition: width 0.7s, height 0.7s;
+    transition: width 0.5s, height 0.5s;
 }
 
 .btn:hover::before{

@@ -11,7 +11,13 @@ body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.btn span{
+#spanBtn{
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.btn{
     position: relative;
     z-index: 1;
 }

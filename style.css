@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: url("https://i.pinimg.com/564x/87/46/ae/8746aedc0803dd1d6733341f78865a5a.jpg"), url("https://wallpapercave.com/wp/wp4865473.jpg");
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    background-size: auto, cover;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn span{
+    position: relative;
+    z-index: 1;
+}
+
+.btn{
+    background-color: pink;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+    text-decoration: none;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.7s, height 0.7s;
+}
+
+.btn:hover::before{
+    width: 300px;
+    height: 300px;
+}

@@ -4,6 +4,9 @@ btnEl.addEventListener("mouseover", (event) => {
     const x = (event.pageX - btnEl.offsetLeft);
     const y = (event.pageY - btnEl.offsetTop);
     var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    while (randomColor === '#ffc0cb') {
+        randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    }
 
     btnEl.style.setProperty("--xPos", x + "px");
     btnEl.style.setProperty("--yPos", y + "px");

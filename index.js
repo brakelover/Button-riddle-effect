@@ -10,6 +10,14 @@ btnEl.addEventListener("mouseover", (event) => {
     btnEl.style.setProperty("--ranCol", "#" + randomColor);
 })
 
+btnEl.addEventListener("mouseout", (event) => {
+    const x = (event.pageX - btnEl.offsetLeft);
+    const y = (event.pageY - btnEl.offsetTop);
+
+    btnEl.style.setProperty("--xPos2", x + "px");
+    btnEl.style.setProperty("--yPos2", y + "px");
+})
+
 /*
 let xr = Math.floor(Math.random() * 256);
 let yr = Math.floor(Math.random() * 256);

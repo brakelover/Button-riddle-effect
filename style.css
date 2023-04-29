@@ -32,7 +32,7 @@ body{
 .btn::before{
     content: "";
     position: absolute;
-    background-color: var(--ranCol, orangered);
+    background-color: pink;
     width: 0;
     height: 0;
     left: var(--xPos);
@@ -42,7 +42,26 @@ body{
     transition: width 0.5s, height 0.5s;
 }
 
-.btn:hover::before{
+.btn:hover::before,
+.btn:not(:hover)::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn::after{
+    content: "";
+    position: absolute;
+    background-color: var(--ranCol, orangered);
     width: 300px;
     height: 300px;
+    left: var(--xPos2);
+    top: var(--yPos2);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
 }
+
+.btn:not(:hover)::after {
+    width: 0;
+    height: 0;
+  }

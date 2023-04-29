@@ -18,11 +18,6 @@ body{
 }
 
 .btn{
-    position: relative;
-    z-index: 1;
-}
-
-.btn{
     background-color: pink;
     padding: 20px 40px;
     border-radius: 5px;
@@ -32,6 +27,7 @@ body{
     position: relative;
     overflow: hidden;
 }
+
 
 .btn::before{
     content: "";
